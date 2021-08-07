@@ -14,6 +14,9 @@
 		C782F86C26405BA500F8AFDD /* note_taker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C782F86A26405BA500F8AFDD /* note_taker.xcdatamodeld */; };
 		C782F86E26405BAB00F8AFDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C782F86D26405BAB00F8AFDD /* Assets.xcassets */; };
 		C782F87126405BAB00F8AFDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C782F86F26405BAB00F8AFDD /* LaunchScreen.storyboard */; };
+		C7D70A2F26B919DC00CAE5FE /* PersistenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D70A2E26B919DC00CAE5FE /* PersistenceStorage.swift */; };
+		C7D70A3226B91BDA00CAE5FE /* Employee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D70A3026B91BDA00CAE5FE /* Employee+CoreDataClass.swift */; };
+		C7D70A3326B91BDA00CAE5FE /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D70A3126B91BDA00CAE5FE /* Employee+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		C782F86D26405BAB00F8AFDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C782F87026405BAB00F8AFDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C782F87226405BAB00F8AFDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7D70A2E26B919DC00CAE5FE /* PersistenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStorage.swift; sourceTree = "<group>"; };
+		C7D70A3026B91BDA00CAE5FE /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C7D70A3126B91BDA00CAE5FE /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		C7D70A2726B3E52700CAE5FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C7D70A2D26B9196800CAE5FE /* CoreData */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +139,16 @@
 				C782F86F26405BAB00F8AFDD /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C7D70A2D26B9196800CAE5FE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C7D70A3026B91BDA00CAE5FE /* Employee+CoreDataClass.swift */,
+				C7D70A3126B91BDA00CAE5FE /* Employee+CoreDataProperties.swift */,
+				C7D70A2E26B919DC00CAE5FE /* PersistenceStorage.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +223,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C782F86626405BA500F8AFDD /* ViewController.swift in Sources */,
+				C7D70A3226B91BDA00CAE5FE /* Employee+CoreDataClass.swift in Sources */,
+				C7D70A2F26B919DC00CAE5FE /* PersistenceStorage.swift in Sources */,
 				C782F86226405BA500F8AFDD /* AppDelegate.swift in Sources */,
 				C782F86426405BA500F8AFDD /* SceneDelegate.swift in Sources */,
 				C782F86C26405BA500F8AFDD /* note_taker.xcdatamodeld in Sources */,
+				C7D70A3326B91BDA00CAE5FE /* Employee+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
