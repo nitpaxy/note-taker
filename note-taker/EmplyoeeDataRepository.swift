@@ -13,8 +13,8 @@ protocol EmplyoeeRepository {
     func create(employee: Employee)
     func fetchAll() -> [Employee]?
     func fetch(byIdentifier id: UUID) -> Employee?
-    func update(employee: Employee)
-    func delete(employee: Employee)
+    func update(employee: Employee) -> Bool
+    func delete(employee: Employee) -> Bool
     
 }
 
@@ -43,6 +43,32 @@ struct EmplyoeeDataRepository: EmplyoeeRepository {
     }
     
     func fetch(byIdentifier id: UUID) -> Employee? {
+        
+        let result = getCDEmployee(byId: id)
+        guard result != nil else { return nil }
+        return result?.convertToEmplyoee()
+    }
+    
+    func update(employee: Employee) -> Bool {
+        let cdEmloyee = getCDEmployee(byId: employee.id)
+        guard cdEmloyee != nil else { return false }
+        cdEmloyee?.email = employee.email
+        cdEmloyee?.name = employee.name
+        cdEmloyee?.profilePic = employee.profilePic
+        
+        PersistenceStorage.shared.saveContext()
+        return true
+    }
+    
+    func delete(employee: Employee) -> Bool {
+        let cdEmloyee = getCDEmployee(byId: employee.id)
+        guard cdEmloyee != nil else { return false }
+        
+        PersistenceStorage.shared.context.delete(cdEmloyee!)        
+        return true
+    }
+    
+    private func getCDEmployee(byId id: UUID) -> CDEmployee? {
         let fetchRequest = NSFetchRequest<CDEmployee>(entityName: "CDEmployee")
         let predicate = NSPredicate(format: "id=%@", id as CVarArg)
         fetchRequest.predicate = predicate
@@ -51,18 +77,10 @@ struct EmplyoeeDataRepository: EmplyoeeRepository {
             let result = try PersistenceStorage.shared.context.fetch(fetchRequest).first
             guard result != nil else { return nil }
             
-            return result?.convertToEmplyoee()
+            return result
         } catch let error {
             debugPrint(error)
         }
         return nil
     }
-    
-    func update(employee: Employee) {
-        
-    }
-    
-    func delete(employee: Employee) {
-        
-    }    
 }

@@ -27,6 +27,6 @@ extension CDEmployee {
 extension CDEmployee : Identifiable {
     
     func convertToEmplyoee() -> Employee {
-        return Employee(email: self.email, name: self.name, id: self.id, profilePic: self.profilePic)
+        return Employee(email: self.email!, name: self.name!, id: self.id!, profilePic: self.profilePic!)
     }
 }

@@ -9,8 +9,8 @@
 import Foundation
 
 struct Employee {
-    let email: String?
-    let name: String?
-    let id: UUID?
-    let profilePic: Data?
+    let email: String
+    let name: String
+    let id: UUID
+    let profilePic: Data
 }
