@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71BB9E2280E986E0020C29B /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BB9E1280E986E0020C29B /* Employee.swift */; };
 		C782F86226405BA500F8AFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C782F86126405BA500F8AFDD /* AppDelegate.swift */; };
 		C782F86426405BA500F8AFDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C782F86326405BA500F8AFDD /* SceneDelegate.swift */; };
 		C782F86626405BA500F8AFDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C782F86526405BA500F8AFDD /* ViewController.swift */; };
@@ -14,9 +15,14 @@
 		C782F86C26405BA500F8AFDD /* note_taker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C782F86A26405BA500F8AFDD /* note_taker.xcdatamodeld */; };
 		C782F86E26405BAB00F8AFDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C782F86D26405BAB00F8AFDD /* Assets.xcassets */; };
 		C782F87126405BAB00F8AFDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C782F86F26405BAB00F8AFDD /* LaunchScreen.storyboard */; };
+		C792FA2D26BED42500ADE4C1 /* CDEmployee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792FA2B26BED42500ADE4C1 /* CDEmployee+CoreDataClass.swift */; };
+		C792FA2E26BED42500ADE4C1 /* CDEmployee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792FA2C26BED42500ADE4C1 /* CDEmployee+CoreDataProperties.swift */; };
+		C792FA3126BED4BE00ADE4C1 /* EmplyoeeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792FA3026BED4BE00ADE4C1 /* EmplyoeeDataRepository.swift */; };
+		C7D70A2F26B919DC00CAE5FE /* PersistenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D70A2E26B919DC00CAE5FE /* PersistenceStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C71BB9E1280E986E0020C29B /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		C782F85E26405BA500F8AFDD /* note-taker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "note-taker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C782F86126405BA500F8AFDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C782F86326405BA500F8AFDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,10 @@
 		C782F86D26405BAB00F8AFDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C782F87026405BAB00F8AFDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C782F87226405BAB00F8AFDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C792FA2B26BED42500ADE4C1 /* CDEmployee+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDEmployee+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C792FA2C26BED42500ADE4C1 /* CDEmployee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDEmployee+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C792FA3026BED4BE00ADE4C1 /* EmplyoeeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplyoeeDataRepository.swift; sourceTree = "<group>"; };
+		C7D70A2E26B919DC00CAE5FE /* PersistenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C71BB9E0280E98430020C29B /* Employee */ = {
+			isa = PBXGroup;
+			children = (
+				C71BB9E1280E986E0020C29B /* Employee.swift */,
+			);
+			path = Employee;
+			sourceTree = "<group>";
+		};
 		C782F85526405BA500F8AFDD = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				C7D70A2A26B3E56200CAE5FE /* Application */,
+				C792FA2F26BED48800ADE4C1 /* Repository */,
 				C7D70A2B26B3E57C00CAE5FE /* Resources */,
 				C7D70A2926B3E53A00CAE5FE /* Sources */,
 				C7D70A2826B3E53400CAE5FE /* Services */,
@@ -70,6 +89,14 @@
 				C782F86A26405BA500F8AFDD /* note_taker.xcdatamodeld */,
 			);
 			path = "note-taker";
+			sourceTree = "<group>";
+		};
+		C792FA2F26BED48800ADE4C1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C792FA3026BED4BE00ADE4C1 /* EmplyoeeDataRepository.swift */,
+			);
+			name = Repository;
 			sourceTree = "<group>";
 		};
 		C7D70A2426B3E50200CAE5FE /* Controllers */ = {
@@ -97,6 +124,8 @@
 		C7D70A2726B3E52700CAE5FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C71BB9E0280E98430020C29B /* Employee */,
+				C7D70A2D26B9196800CAE5FE /* CoreData */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +140,7 @@
 		C7D70A2926B3E53A00CAE5FE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C7D70A2E26B919DC00CAE5FE /* PersistenceStorage.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -132,6 +162,15 @@
 				C782F86F26405BAB00F8AFDD /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C7D70A2D26B9196800CAE5FE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C792FA2B26BED42500ADE4C1 /* CDEmployee+CoreDataClass.swift */,
+				C792FA2C26BED42500ADE4C1 /* CDEmployee+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +245,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C782F86626405BA500F8AFDD /* ViewController.swift in Sources */,
+				C71BB9E2280E986E0020C29B /* Employee.swift in Sources */,
+				C7D70A2F26B919DC00CAE5FE /* PersistenceStorage.swift in Sources */,
 				C782F86226405BA500F8AFDD /* AppDelegate.swift in Sources */,
+				C792FA2E26BED42500ADE4C1 /* CDEmployee+CoreDataProperties.swift in Sources */,
+				C792FA2D26BED42500ADE4C1 /* CDEmployee+CoreDataClass.swift in Sources */,
 				C782F86426405BA500F8AFDD /* SceneDelegate.swift in Sources */,
 				C782F86C26405BA500F8AFDD /* note_taker.xcdatamodeld in Sources */,
+				C792FA3126BED4BE00ADE4C1 /* EmplyoeeDataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
