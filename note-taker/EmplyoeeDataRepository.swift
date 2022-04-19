@@ -18,9 +18,10 @@ protocol EmplyoeeRepository {
     
 }
 
+// Employee Entitiy Data Repository Layer
 struct EmplyoeeDataRepository: EmplyoeeRepository {
     
-    
+    // Create record in for Emplyoee Entity.
     func create(employee: Employee) {
         let cdEmployee = CDEmployee(context: PersistenceStorage.shared.context)
         cdEmployee.email = employee.email
@@ -32,6 +33,7 @@ struct EmplyoeeDataRepository: EmplyoeeRepository {
         PersistenceStorage.shared.saveContext()
     }
     
+    // Fetches record for Emplyoee Entity.
     func fetchAll() -> [Employee]? {
         let result = PersistenceStorage.shared.fetchManagedObject(managedObject: CDEmployee.self)
         
@@ -42,6 +44,7 @@ struct EmplyoeeDataRepository: EmplyoeeRepository {
         return emplyoees
     }
     
+    // Fetches record for one Emplyoee.
     func fetch(byIdentifier id: UUID) -> Employee? {
         
         let result = getCDEmployee(byId: id)
@@ -49,6 +52,7 @@ struct EmplyoeeDataRepository: EmplyoeeRepository {
         return result?.convertToEmplyoee()
     }
     
+    // Updates record for one Emplyoee.
     func update(employee: Employee) -> Bool {
         let cdEmloyee = getCDEmployee(byId: employee.id)
         guard cdEmloyee != nil else { return false }
@@ -60,11 +64,12 @@ struct EmplyoeeDataRepository: EmplyoeeRepository {
         return true
     }
     
+    // Deletes record for one Emplyoee.
     func delete(employee: Employee) -> Bool {
         let cdEmloyee = getCDEmployee(byId: employee.id)
         guard cdEmloyee != nil else { return false }
         
-        PersistenceStorage.shared.context.delete(cdEmloyee!)        
+        PersistenceStorage.shared.context.delete(cdEmloyee!)
         return true
     }
     
